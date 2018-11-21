@@ -1,15 +1,17 @@
 $(function(){
 
-  let startTimestamp, stopTimestamp;
+  let startTimestamp, stopTimestamp, socket;
 
+  socket = io.connect('http://localhost:4000');
   initSensors();
-
   $('#startSession').on('click', function() {
     $('#recording').fadeIn();
     startTimestamp = (new Date()).getTime();
 
     startRecording();
     startSensorRecording();
+
+    // startSendData(socket);
 
   });
 

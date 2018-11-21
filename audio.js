@@ -108,12 +108,36 @@ function stopRecording(startTimestamp, stopTimestamp) {
       var audioLink = document.createElement('a');
       audioLink.setAttribute('href', src);
       audioLink.setAttribute('download', startTimestamp + '_' + stopTimestamp + '.wav');
-      audioLink.click();
+      // audioLink.click();
 
+      var duration = (stopTimestamp - startTimestamp) / 1000;
+      uploadFileToServer(blob, duration);
+      // console.log({startTimestamp, stopTimestamp});
       /*$('#downloadAudio').attr('href', src);
       $('#downloadAudio').attr('download', startTimestamp + '_' + stopTimestamp + '.ogg');*/
     }
   };
   recorder.stop();
   downloadRawData();
+}
+
+// function startSendData(socket) {
+//   recorder.onstart = function(e) {
+//     console.log(e);
+//   }
+// }
+
+function uploadFileToServer(blob, duration) {
+  var fd = new FormData();
+  fd.append('data', blob);
+  fd.append('duration', duration);
+  $.ajax({
+    type: 'POST',
+    url: 'http://localhost:4000/api/upload',
+    data: fd,
+    processData: false,
+    contentType: false
+    }).done(function(data) {
+       console.log(data);
+    });
 }

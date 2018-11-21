@@ -24,7 +24,7 @@
             <a class="nav-link" id="stopSession" href="#">Stop</a>
           </li>
         </ul><!-- /nav -->
-        
+
         <div class="row justify-content-center">
           <canvas></canvas>
         </div>
@@ -48,7 +48,7 @@
           <!-- /audio -->
           <div class="col-sm">
             <div class="alert alert-primary" role="alert">Sensor data</div>
-            
+
             <div class="input-group col-xs-12">
               <span class="input-group-addon">Compass</span>
               <input type="text" class="form-control" id="compassHeading" disabled>
@@ -60,29 +60,29 @@
               <span class="input-group-addon">alpha</span>
               <input type="text" class="form-control" id="do_alpha" disabled>
             </div>
-            
+
             <div class="input-group col-xs-12">
               <span class="input-group-addon">beta</span>
               <input type="text" class="form-control" id="do_beta" disabled>
             </div>
-            
+
             <div class="input-group col-xs-12">
               <span class="input-group-addon">gamma</span>
               <input type="text" class="form-control" id="do_gamma" disabled>
             </div>
-            
+
              Acceleration
 
             <div class="input-group col-xs-4 first">
               <span class="input-group-addon">x</span>
               <input type="text" class="form-control" id="dm_x" disabled>
             </div>
-            
+
             <div class="input-group col-xs-4">
               <span class="input-group-addon">y</span>
               <input type="text" class="form-control" id="dm_y" disabled>
             </div>
-            
+
             <div class="input-group col-xs-4">
               <span class="input-group-addon">z</span>
               <input type="text" class="form-control" id="dm_z" disabled>
@@ -94,12 +94,12 @@
               <span class="input-group-addon">x</span>
               <input type="text" class="form-control" id="dm_gx" disabled>
             </div>
-            
+
             <div class="input-group col-xs-4">
               <span class="input-group-addon">y</span>
               <input type="text" class="form-control" id="dm_gy" disabled>
             </div>
-            
+
             <div class="input-group col-xs-4">
               <span class="input-group-addon">z</span>
               <input type="text" class="form-control" id="dm_gz" disabled>
@@ -111,12 +111,12 @@
             <span class="input-group-addon">alpha</span>
             <input type="text" class="form-control" id="dm_alpha" disabled>
           </div>
-          
+
           <div class="input-group col-xs-12">
             <span class="input-group-addon">beta</span>
             <input type="text" class="form-control" id="dm_beta" disabled>
           </div>
-          
+
           <div class="input-group col-xs-12">
             <span class="input-group-addon">gamma</span>
             <input type="text" class="form-control" id="dm_gamma" disabled>
@@ -129,6 +129,7 @@
       <!-- JS -->
       <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
       <script src="gyronorm.complete.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.1.1/socket.io.dev.js"></script>
 
       <script src="logger.js"></script>
       <script src="audio.js"></script>
